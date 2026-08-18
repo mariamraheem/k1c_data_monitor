@@ -1,0 +1,86 @@
+{
+  "_comment": "Query budget: keep total under ~90/day to stay inside Google Custom Search's free 100/day quota. Org queries + people + partner orgs (2 queries each: general + site-restricted) = ~58/day.",
+
+  "own_domain": "kidsfirstchicago.org",
+
+  "org_queries": [
+    {
+      "id": "org_name_full",
+      "query": "\"Kids First Chicago\" -site:kidsfirstchicago.org",
+      "category": "org_mention"
+    },
+    {
+      "id": "org_name_abbrev",
+      "query": "\"K1C\" (\"Chicago Public Schools\" OR CPS OR Chicago) -site:kidsfirstchicago.org",
+      "category": "org_mention"
+    },
+    {
+      "id": "hyperlink_backlink",
+      "query": "\"kidsfirstchicago.org\" -site:kidsfirstchicago.org",
+      "category": "hyperlink_mention"
+    }
+  ],
+
+  "partner_orgs": [
+    {"name": "Advance Illinois", "domain": "advanceillinois.org"},
+    {"name": "Raise Your Hand Illinois", "domain": "raiseyourhandillinois.org"},
+    {"name": "UChicago Consortium", "domain": "consortium.uchicago.edu"},
+    {"name": "Urban Institute", "domain": "urban.org"},
+    {"name": "Council of Great City Schools", "domain": "cgcs.org"}
+  ],
+
+  "people": [
+    {"name": "Daniel Anello", "role": "Chief Executive Officer", "group": "staff"},
+    {"name": "Jessica Cañas", "role": "Chief of Community Engagement", "group": "staff"},
+    {"name": "Daisy Carrera", "role": "Manager, Community Engagement-School Partnership", "group": "staff"},
+    {"name": "Melanie Christion", "role": "Community Engagement Coordinator", "group": "staff"},
+    {"name": "Nayda De La Rosa", "role": "Associate Director of Organizing & Community Partnerships", "group": "staff"},
+    {"name": "Vanessa Espinoza", "role": "Senior Manager of Communications & Accessibility", "group": "staff"},
+    {"name": "Zelianel Ferrer Costas", "role": "Senior Operations Manager", "group": "staff"},
+    {"name": "Emani Johnson", "role": "Policy Manager", "group": "staff"},
+    {"name": "Nicholas Jones", "role": "Associate Director of Programs & School Partnerships", "group": "staff"},
+    {"name": "Teresa Maldonado", "role": "Manager of Community Engagement, Parent Leadership Fellowship", "group": "staff"},
+    {"name": "Maria Maynez", "role": "Bilingual Community Engagement Coordinator", "group": "staff"},
+    {"name": "Evelyn Merlos", "role": "Senior Coordinator, Development & External Affairs", "group": "staff"},
+    {"name": "Kendall Moore-Fields", "role": "Policy Manager", "group": "staff"},
+    {"name": "Cathy Paliga", "role": "Executive Assistant", "group": "staff"},
+    {"name": "Tierra Pearson", "role": "Community Engagement Coordinator, West Side", "group": "staff"},
+    {"name": "Kristin Pollock", "role": "Chief Operating Officer", "group": "staff"},
+    {"name": "Mariam Raheem", "role": "Senior Data Analyst", "group": "staff"},
+    {"name": "Adela Perez Salvidar", "role": "Senior Community Engagement Coordinator, Southwest Side", "group": "staff"},
+    {"name": "Sam Schneider", "role": "Senior Grants Manager", "group": "staff"},
+    {"name": "August Smith", "role": "Director of Policy and Strategic Initiatives", "group": "staff"},
+    {"name": "Emily Summers", "role": "Director of Development", "group": "staff"},
+    {"name": "Sitoria Townsend", "role": "Digital Communications Manager", "group": "staff"},
+    {"name": "Micaelan Valesky", "role": "Manager of Data Science", "group": "staff"},
+    {"name": "Hal Woods", "role": "Chief of Policy", "group": "staff"},
+
+    {"name": "Laura Thonn", "role": "Board Chair; PwC", "group": "board"},
+    {"name": "Mara Botman", "role": "Board; Vivo Foundation", "group": "board"},
+    {"name": "Katherine Chairez", "role": "Board; DRW", "group": "board"},
+    {"name": "Bogdana Chkoumbova", "role": "Board; BC EduConsult", "group": "board"},
+    {"name": "Cassandra Di Prizio", "role": "Board; Boston Consulting Group", "group": "board"},
+    {"name": "Derek Douglas", "role": "Board; Civic Committee of The Commercial Club of Chicago", "group": "board"},
+    {"name": "Shayne Evans", "role": "Board; The Academy Group", "group": "board"},
+    {"name": "Thomas J. Formolo", "role": "Board; New Harbor Capital", "group": "board"},
+    {"name": "Anthony Garcia", "role": "Board; Streeterville Realty", "group": "board"},
+    {"name": "Cornelia Grumman", "role": "Board; Former Dir. of Education, McCormick Foundation", "group": "board"},
+    {"name": "Darrel Hackett", "role": "Board; BMO Bank", "group": "board"},
+    {"name": "Caleb Herod", "role": "Board; The Chicago Community Trust", "group": "board"},
+    {"name": "Philip L. Hildebrandt", "role": "Board; Segall Bryant & Hamill", "group": "board"},
+    {"name": "Travis C. Hunter Jr.", "role": "Board; KPMG", "group": "board"},
+    {"name": "LeeAndra Khan", "role": "Board; EPIC Academy", "group": "board"},
+    {"name": "Jean Lawrence", "role": "Board; Nokia", "group": "board"},
+    {"name": "Maria Owens", "role": "Board; Owens & Robinson Law", "group": "board"},
+    {"name": "Nichole Pinkard", "role": "Board; Northwestern University", "group": "board"},
+    {"name": "Penny Bender Sebring", "role": "Board; UChicago Consortium", "group": "board"},
+    {"name": "Robert Venable", "role": "Board; Miami Corporation Management", "group": "board"},
+    {"name": "Justin Weinstein", "role": "Board; Giant Eagle", "group": "board"},
+    {"name": "Kelly R. Welsh", "role": "Board; Former Pres., Civic Committee of The Commercial Club of Chicago", "group": "board"}
+  ],
+
+  "_excluded_from_scan": {
+    "note": "Directors Emeritus omitted by default (low signal, high noise from unrelated people sharing common names, e.g. 'John W. Madigan'). Add back individually in config if needed.",
+    "names": ["Patrick J. Canning", "David Casper", "Lula Ford", "Donald G. Lubin", "John W. Madigan", "John W. Rowe", "Timothy R. Schwertfeger", "Nancy S. Searle", "Harrison I. Steans"]
+  }
+}
